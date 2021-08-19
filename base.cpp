@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <cassert>
 #include <assert.h>
+#include <cctype>
+#include <ctime>
 
 
 using namespace std;

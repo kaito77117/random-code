@@ -80,16 +80,13 @@ void viewSheet(vector <string> w, vector <string> x, vector <string> y, vector <
 
 int logSearch(string ser, vector <string> ttle){
     int sgt;
-    int k = 1;
+    int k = ttle.size();
     for(auto g = ttle.begin(); g != ttle.end(); ++g){
-        k++;
         if (ser == *g){
-            sgt = ttle.size() - k;
-            cout << sgt;
-            cout << ttle.size();
-            cout << k;
+            sgt = k;
             return sgt;
         }
+        k--;
     }
     sgt = 2147483647;
     return sgt;
@@ -129,6 +126,8 @@ if(voe == 1){
         }else{
             cout << title[searchGoTo] << " || " << description[searchGoTo] << " || " << information[searchGoTo] << " || " << deadline[searchGoTo] << endl;
         }
+        voe = 0;
+        continue;
     }
     voe = 0;
     continue;

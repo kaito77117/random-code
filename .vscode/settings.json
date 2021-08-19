@@ -2,7 +2,10 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "xstring": "cpp",
+        "vector": "cpp",
+        "cstdlib": "cpp"
     },
     "git.ignoreLimitWarning": true
 }
