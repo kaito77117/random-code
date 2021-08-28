@@ -21,10 +21,12 @@ class chromo{
 public: 
 vector <char> chromosome;
 
-void printvector(){
+void printvector(int &a){
     for(int i = 0; i<chromosome.size(); i++){
         cout << chromosome[i];
     }
+    cout << a;
+    a++;
 }
 
 
@@ -65,11 +67,14 @@ int main(){
 chromo chro;
 string targetchro;
 int chrolen = 0;
+int attemptnum = 0;
 
+//for(int i = 0; i<2; i++){
+    gettarget(targetchro, chrolen);
+    setChromo(chro, chrolen);
+    chro.printvector(attemptnum);
+//}
 
-gettarget(targetchro, chrolen);
-setChromo(chro, chrolen);
-chro.printvector();
 
 
 }
