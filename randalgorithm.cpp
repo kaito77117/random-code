@@ -19,14 +19,28 @@ using namespace std;
 class chromo{
 
 public: 
-vector <char> chromosome;
+vector <string> chromosome;
+vector <char> chromosomechar;
+
+int repeatNum = 0;
 
 void printvector(int &a){
     for(int i = 0; i<chromosome.size(); i++){
         cout << chromosome[i];
     }
-    cout << a;
+    cout << a << endl;
     a++;
+}
+
+
+void remix(string b){
+    
+    for (int c = 0; c<chromosome.size(); c++){
+        //chromosomechar.push_back(chromosome[c]);
+    }
+    /*if(chromosome[c] == b[c]){
+            
+        }*/
 }
 
 
@@ -54,26 +68,51 @@ void setChromo(chromo &chro, int chromolength){
     srand(time(NULL));
     int randomnum;
     const string chromostring{"abcdefghijklmnopqrstuvwxyz"};
+    vector <char> chromostring1;
     for (int i = 0; i<chromolength; i++){
         randomnum = (rand() % 26) + 1;
-        chro.chromosome.push_back(chromostring[randomnum]);
+        chromostring1.push_back(chromostring[randomnum]);
     }
+    string addToVector(chromostring1.begin(), chromostring1.end());
+    chro.chromosome.push_back(addToVector);
 
+}
 
+void remix(vector <char> &chromo){
+    
 }
 
 int main(){
 
 chromo chro;
 string targetchro;
-int chrolen = 0;
+int chroleng = 0;
 int attemptnum = 0;
+bool numMatch = false;
+vector <chromo> chromoArray;
+int i = 0;
+int l = 0;
 
-//for(int i = 0; i<2; i++){
-    gettarget(targetchro, chrolen);
-    setChromo(chro, chrolen);
-    chro.printvector(attemptnum);
-//}
+gettarget(targetchro, chroleng);
+
+
+
+
+while(!numMatch){
+    for (int j = 0; j<5; j++){
+            chromoArray.push_back(chro);
+    }
+    
+        setChromo(chromoArray[i], chroleng);
+        chromoArray[i].printvector(attemptnum);
+        chromoArray[i].remix(targetchro);
+        
+    
+    if(chromoArray[i].chromosome[l] == targetchro){
+        numMatch = true;    
+    }
+
+}
 
 
 
