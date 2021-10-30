@@ -16,7 +16,10 @@
 
 using namespace std;
 
+//PLAN:
+/*
 
+*/
 
 
 class numberstring{
@@ -35,6 +38,8 @@ int askForNumOfEntries(int a){
 int main(){
     int numOfEntries = 0;
     int placeholder = 0;
+    const string numberCount{"stndrdth"};
+    //1st 2nd 3rd 4th 5th 6th 7th 8th 9th 10th
     numberstring numstr;
     vector <numberstring> numstrArray;
 
@@ -42,6 +47,8 @@ int main(){
     for(int i = 0; i<numOfEntries; i++){
         numstrArray.push_back(numstr);
     }
+
+    
     //intialize how many entries r gonna be put in, and create <num of entries> arrays
 
 }
